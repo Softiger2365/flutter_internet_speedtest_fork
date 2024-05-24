@@ -9,7 +9,9 @@ typedef DefaultCallback = void Function();
 typedef ResultCallback = void Function(TestResult download, TestResult upload);
 typedef TestProgressCallback = void Function(double percent, TestResult data);
 typedef ResultCompletionCallback = void Function(TestResult data);
-typedef DefaultServerSelectionCallback = void Function(Client? client);
+typedef DefaultServerSelectionCallback = void Function(
+  ServerSelectionResponse? serverSelectionResponse,
+);
 
 class FlutterInternetSpeedTest {
   static const _defaultDownloadTestServer =
@@ -66,7 +68,7 @@ class FlutterInternetSpeedTest {
           await FlutterInternetSpeedTestPlatform.instance.getDefaultServer();
 
       if (onDefaultServerSelectionDone != null) {
-        onDefaultServerSelectionDone(serverSelectionResponse?.client);
+        onDefaultServerSelectionDone(serverSelectionResponse);
       }
       String? url = serverSelectionResponse?.targets?.first.url;
       if (url != null) {

@@ -149,7 +149,9 @@ class _MyAppState extends State<MyApp> {
                       setState(() {
                         _isServerSelectionInProgress = true;
                       });
-                    }, onDefaultServerSelectionDone: (Client? client) {
+                    }, onDefaultServerSelectionDone:
+                        (ServerSelectionResponse? response) {
+                      final client = response?.client;
                       setState(() {
                         _isServerSelectionInProgress = false;
                         _ip = client?.ip;
