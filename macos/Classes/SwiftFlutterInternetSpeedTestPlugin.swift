@@ -1,5 +1,4 @@
 import FlutterMacOS
-import UIKit
 
 public class SwiftInternetSpeedTestPlugin: NSObject, FlutterPlugin {
     let DEFAULT_FILE_SIZE = 10485760
