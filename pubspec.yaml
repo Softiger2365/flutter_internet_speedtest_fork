@@ -45,6 +45,8 @@ flutter:
         pluginClass: FlutterInternetSpeedTestPlugin
       ios:
         pluginClass: FlutterInternetSpeedTestPlugin
+      macos:
+        pluginClass: FlutterInternetSpeedTestPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
