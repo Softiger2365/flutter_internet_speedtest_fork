@@ -1,4 +1,4 @@
-import Flutter
+import FlutterMacOS
 import UIKit
 
 public class SwiftInternetSpeedTestPlugin: NSObject, FlutterPlugin {
